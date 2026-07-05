@@ -1,5 +1,5 @@
 const CONFIG = {
-  SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbyI72Glyd99b-OuDvme2TzxNVFQZkZIwCJu6csxUG4HK_vpbe9ePoDVZnGVH1BBvkYdHw/exec',
+  SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbyJzCC4NnfCrIoiV5mAUd6fxTqnZMu042e8z9dO7N6Bqm4z87wqPMmrk4Xl91PJcv5veg/exec',
 };
 
 const MAX_FILES = 5;
