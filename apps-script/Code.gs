@@ -1,17 +1,3 @@
-/**
- * Categories Bug Report — Google Apps Script Backend (gehärtete Version)
- *
- * Einrichtung:
- *  - Script Properties (Projekteinstellungen > Skripteigenschaften):
- *      GITHUB_TOKEN  = dein fine-grained PAT (nur Issues: Read & Write)
- *      GITHUB_REPO   = "owner/repo", z. B. "jonashoerner/Categories"
- *  - Als Web-App bereitstellen (Ausführen als: Ich, Zugriff: Jeder).
- *
- * Enthält: serverseitige Validierung (Längen, Dateianzahl/-größe, MIME-Typen,
- * Magic Bytes), Rate Limiting per CacheService, Honeypot- & Timing-Check,
- * Markdown-/Mention-Escaping.
- */
-
 // ===== Limits (müssen mit dem Frontend übereinstimmen bzw. dürfen strenger sein) =====
 var LIMITS = {
   TITLE_MAX: 200,
