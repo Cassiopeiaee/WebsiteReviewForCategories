@@ -11,6 +11,7 @@ const ALLOWED_TYPES = [
 const ALLOWED_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.mp4', '.mov', '.webm'];
 
 let selectedFiles = [];
+const pageLoadedAt = Date.now();
 
 const form = document.getElementById('bug-report-form');
 const submitBtn = document.getElementById('btn-submit');
@@ -241,7 +242,9 @@ async function handleSubmit(e) {
       description,
       steps,
       email,
-      files: filesPayload
+      files: filesPayload,
+      website: document.getElementById('website')?.value || '',
+      elapsedMs: Date.now() - pageLoadedAt
     };
 
     const response = await fetch(CONFIG.SCRIPT_URL, {

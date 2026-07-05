@@ -1082,3 +1082,16 @@ body {
   width: 100%;
   background: var(--btn-green);
 }
+
+
+/* Honeypot field: moved off-screen so humans never see it, but bots still fill it */
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
