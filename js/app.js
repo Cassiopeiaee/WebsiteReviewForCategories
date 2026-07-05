@@ -1,5 +1,5 @@
 const CONFIG = {
-  SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbzJ0iKBi7YinRoe4BsNpZhkZlD2DKvE1iLJIC9kymCGPYs4RXOZt-FdLRtBU7FKsrr4aw/exec',
+  SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbyI72Glyd99b-OuDvme2TzxNVFQZkZIwCJu6csxUG4HK_vpbe9ePoDVZnGVH1BBvkYdHw/exec',
 };
 
 const MAX_FILES = 5;
@@ -260,7 +260,7 @@ async function handleSubmit(e) {
     }
 
     const result = await response.json();
-    
+
     if (!result.success) {
       let errorDetail = 'Server error';
       if (result.error) {

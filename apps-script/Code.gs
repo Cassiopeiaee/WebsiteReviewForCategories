@@ -105,6 +105,13 @@ function doPost(e) {
   }
 }
 
+// ===== Antwort-Helfer =====
+function jsonResponse(obj) {
+  return ContentService
+    .createTextOutput(JSON.stringify(obj))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+
 // ===== Rate Limiting =====
 function checkRateLimit() {
   var cache = CacheService.getScriptCache();
