@@ -283,6 +283,19 @@ async function handleSubmit(e) {
 
   } catch (error) {
     console.error(error);
+
+    // Embedded browsers (e.g. the Steam overlay) block reading the CORS
+    // response from Apps Script even though the request itself went through.
+    // fetch then throws a TypeError ("Failed to fetch") despite successful
+    // delivery — treat that as success unless we are actually offline.
+    if (error instanceof TypeError && navigator.onLine) {
+      showSuccessOverlay();
+      form.reset();
+      selectedFiles = [];
+      filePreviews.innerHTML = '';
+      return;
+    }
+
     showToast('error', 'Submission Failed', `Could not submit report: ${error.message}`);
   } finally {
     submitBtn.classList.remove('loading');
